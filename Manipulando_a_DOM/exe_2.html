@@ -1,0 +1,41 @@
+<html>
+    <head></head>
+    <body>
+        <div>
+            <button class="box" onclick="maisQuadrado()">Create</button>
+            <div class="boxes" onmouseover="getRandomColor()"></div>
+        </div>
+        <script>
+            
+            var boxElement = document.querySelector('.box')
+            var boxesElement = document.querySelector('.boxes')
+            function maisQuadrado(){
+               var rand1 = Math.random()*1000
+               var rand2 = Math.random()*1000
+               var rand3 = Math.random()*1000
+               var rand4 = Math.random()*1000
+               boxesElement.style.width = 100
+               boxesElement.style.height = 100
+               boxesElement.style.marginTop = rand1 
+               boxesElement.style.marginBottom = rand2
+               boxesElement.style.marginLeft = rand3
+               boxesElement.style.marginRight = rand4 
+               
+               boxesElement.style.backgroundColor = '#f00'
+
+               //linkElement.appendChild(boxesElement)
+            }
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                boxesElement.style.backgroundColor = color
+
+            }
+
+        </script>
+    </body>
+</html>

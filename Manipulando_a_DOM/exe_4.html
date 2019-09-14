@@ -1,0 +1,45 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="lista">
+                <input type="text" name="nome">
+                <button class="botao" onClick="adicionar()">Adicionar</button>
+        </div>
+    </body>
+    <script>
+        var listElement = document.createElement('ul')
+        
+        var listElement1 = document.createElement('li')
+        var textElement1 = document.createTextNode('Diego')
+        listElement1.appendChild(textElement1)
+        listElement.appendChild(listElement1)
+
+        var listElement2 = document.createElement('li')
+        var textElement2 = document.createTextNode('Gabriel')
+        listElement2.appendChild(textElement2)
+        listElement.appendChild(listElement2)
+
+        var listElement3 = document.createElement('li')
+        var textElement3 = document.createTextNode('Lucas')
+        listElement3.appendChild(textElement3)
+        listElement.appendChild(listElement3)
+
+        var containerElement = document.querySelector('#lista')
+        containerElement.appendChild(listElement)
+
+        var inputElement = document.querySelector('input[name=nome]')
+        var btnElement = document.querySelector('button.botao')
+
+        btnElement.onclick = function adicionar(){
+            var listElementNew = document.createElement('li')
+            var textElementNew = document.createTextNode(inputElement.value)
+            listElementNew.appendChild(textElementNew)
+            listElement.appendChild(listElementNew)
+
+            containerElement.appendChild(listElement)
+        }
+    </script>
+
+</html>
