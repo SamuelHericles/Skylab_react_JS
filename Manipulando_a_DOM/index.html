@@ -1,13 +1,23 @@
-<html>
+    <html>
     <head>
 
     </head>
-    <body>
+    <body>           
+        <!--
         <div id="app">
-            <!-- Chamar a função pelos os atributos javascripto na tag button entre outras
+                Chamar a função pelos os atributos javascripto na tag button entre outras
                 <button onclick="mostraAlerta()">Me pressione</button>-->
-            <button onmouseover="mostraAlerta()">Me passe</button>
-        </div>
+            <!--<button onmouseover="mostraAlerta()">Me passe</button>
+              </div>
+            -->
+            <div id= "app">
+                <!--</1><input type="text" name="nome" id="nome"/>
+                <input type="text" name="nome" id="nome2"/>
+                <button class="botao">Adicionar</button> -->
+                <input id="nome"/>
+                <div class="box"></div>
+            </div>
+      
         <script>
             //====================================//
             //Eventos inline
@@ -16,6 +26,54 @@
                 alert('Botão foi clicado')//funcao globald o js
             }
             //====================================//
+            //Trabalhando com a DOM
+            //Referenciar tag html com javascript
+            //var inputElement = document.getElementById('nome')//document eh a DOM do html
+            //var inputElement = document.getElementsByTagName('input')//[0] só o priemiro input//buscar todos os elementos com a tag input,retorna um vetor
+            //var inputElement = document.getElementsByClassName('input')//retornas as classes dos inputs
+            //var inputElement = document.querySelector('body div#app input')//buscar os elementos pela nossa DOM, mas eu posso dizer onde o input está na DOM
+            //var inputElement = document.querySelector('input[name=nome]')//colchete quer dizer referncias um proproedade dda tag html, querySelecto envia apenas um unico elemento
+            //var inputElement = document.querySelectorAll('input[name=nome2]')//Busca todos os elementos colocados no paraêmtro,gerlemtne eh para elementos na tela
+            var inputElement = document.querySelector('input[name=nome]')
+            var btnElement =  document.querySelector('button.botao')
+            
+            //Fazer as refreencias do html para passar o mouse pelo o javascript
+            /*btnElement.onclick = function(){
+                //Pegar o elemento do input e colocar como alert
+                var text = inputElement.value
+                //alert('Botão clicado')
+                alert(text)
+            }*/
+
+
+            //=====================================//
+            //Lindando com elementos
+            //Criar tags pelo o javascript
+
+            //Criar tag a
+            var linkElement = document.createElement('a')
+            linkElement.setAttribute('href','www.google.com')
+            linkElement.setAttribute('title','um site')
+
+            //Criar um texto e deixar como o filho da tag a
+            var textElement = document.createTextNode('Acesar o site')
+            linkElement.appendChild(textElement)//adicionar o textElement como filho da tag a
+
+            //Colocá-los na tag que tem o id app e deixar a tag a como filha dela
+            var containerElement = document.querySelector('#app')
+            containerElement.appendChild(linkElement)
+
+            var inputElement = document.querySelector('#nome')
+            containerElement.removeChild(inputElement)//remover o input com javsript
+            
+            //======================================//
+            //Alterando estilos css com javscripts
+
+            var boxElement = document.querySelector('.box')
+
+            boxElement.style.width = 100 //alterando o style que é a da largura, não precusa colocar o pixel já e por padrão
+            boxElement.style.height = 100 //alterando a altura.
+            boxElement.style.backgroundColor = '#f00'
         </script>
     </body>
 </html>
