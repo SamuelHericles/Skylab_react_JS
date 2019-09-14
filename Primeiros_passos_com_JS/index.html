@@ -43,9 +43,95 @@
             console.log(x)
             //=================================//
             //Funções
+            function soma(numero1,numero2){
+                var resultado = numero1+numero2
+                return resultado
+            }
+            console.log(soma(1,2))
+            //=================================//
+            //Consdicionais
+            function sexo(sexo){
+                //M, F
+                /*
+                    CONDICINOAL COM IF E ELSE
+                if(sexo == 'M'){
+                    // == -> verifica se os valores são iguais
+                    // === -> verifica se os valores e o TIPO são igauis
+                    return 'Masculino'
+                }
+                else if(sexo == 'F'){
+                    return 'Feminio'
+                }   
+                else{
+                    return 'Outro'
+                }*/
+
+                //CONDICIONAL COM SWITCH
+                switch(sexo){
+                    case 'M':
+                        return 'Masculino'
+                    case 'F':
+                        return 'Feminino'
+                    default:
+                        return 'Outro'
+                }
+
+            }
+            console.log(sexo('M'))
+            //====================================//
+            //Operadores lógicos AND,OR,NOT
+            var sexo = 'M',idade = 23;
+            if(sexo === 'M' && idade >= 18){
+                console.log('OK')
+            }
+            else if(sexo === 'F' || idade<= 18){
+                console.log('OK2')
+            }
+            else if(sexo != 'M'){//Verificar que não eh nem tipo nem valor da variavel
+                console.log('OK@')
+            } 
+            var masculino = sexo ==='M';
+            console.log(masculino);//vai -dar indefinida
+            //=====================================//
+            //Condição ternária
+            //Reduzi verbozida do if e else
+            function sexoDef(sexo){
+                /*
+                if(sexo === 'M'){
+                    return 'Masculino'
+                } else{
+                    return 'Feminino'
+                }*/
+                //em vez disso acima,pode ser igual aqui em baixo.
+                return (sexo === 'M') ? 'Masculino' : 'Feminino'
+            }
+            console.log(sexoDef('F'))
+            //=====================================//
+            //Estruturas de repetição
+            for(var i = 0 ; i<= 5; i++){
+                console.log(i)
+            }
+            var j = 0
+            //While eh quando eu não tenho controle do intervalo
+            while(j<=5){
+                console.log(j)
+                j++
+            }
+
+
+            //====================================//
+            //Intervalo e timeout
+            function exibeAlgo(){
+                console.log('Helo World')
+            }
+            //setinterval executa várias vezes em um tempo predetermiando
+            setInterval(exibeAlgo(), 1000)//1000ms = 1s
+            //com o () só executa uma vez,com () só executa a fun não o referencia
+            //sem o (), passa só a função mas naõ executa nenhum coisa
+
+            //setTimeOut executa uma vez mas até um intervalo
+            setTimeout(exibeAlgo,5000)// 5s para executar
             
-
-
 
         </script>
     </body>
