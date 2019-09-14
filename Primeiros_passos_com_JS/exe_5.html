@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var usuarios = [
+                {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+           ];
+           function exibeText(usuarios){
+                o = usuarios.habilidades
+               for (let value of usuarios){
+                    console.log('O '+ value.nome+ ' possui as hailidades '+value.habilidades.join())
+                }
+           }
+            exibeText(usuarios)
+        </script>
+    </body>
+</html>
