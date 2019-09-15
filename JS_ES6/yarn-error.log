@@ -1,0 +1,37 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn add @babel/cli
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/snapd/snap/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  12.10.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/archie/Arquivos/GitHub/Skylab_react_js/JS_ES6/package.json: Unexpected token / in JSON at position 0
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:304:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:315:13
+
+npm manifest: 
+  //Armazena as dependencia da nossa máquina
+  {
+    "name": "JS_ES6",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
