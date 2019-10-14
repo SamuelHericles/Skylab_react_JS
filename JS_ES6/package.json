@@ -7,14 +7,18 @@
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/plugin-transform-async-to-generator": "^7.5.0",
+    "@babel/polyfill": "^7.6.0",
     "@babel/preset-env": "^7.6.3",
     "webpack": "^4.41.1",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
   },
   "scripts": {
-    "dev": "webpack --node=development -w"
+    "dev": "webpack-dev-server --node=development"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "babel-loader": "8.0.0-beta.0"
   }
 }
