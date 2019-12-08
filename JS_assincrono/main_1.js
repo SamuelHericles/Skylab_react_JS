@@ -8,7 +8,7 @@ function checaIdade(idade){
     })
 }
 
-checaIdade(2)
+checaIdade(20)
     .then(function(response){
         console.log("Maior que 18")
     })
